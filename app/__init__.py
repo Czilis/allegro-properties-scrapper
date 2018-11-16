@@ -3,8 +3,8 @@ from flask import (
     render_template,
     request)
 
-from Formatter import format_table_for_shop
-from Parser import Parser
+from app.Formatter import format_table_for_shop
+from app.Parser import Parser
 
 app = Flask(__name__)
 

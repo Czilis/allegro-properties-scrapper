@@ -45,9 +45,3 @@ class Parser:
         parameter_table_parent = webpage_entity.find(attrs={"data-prototype-id": "allegro.showoffer.parameters"})
         parameter_table: BeautifulSoup = parameter_table_parent.contents[1].contents[0]
         return self.__map_parameter_table(parameter_table.contents)
-
-
-parser = Parser()
-dupa = parser.parse_product_parameter("https://allegro.pl/monnari-torebka-listonoszka-worek-2018-hit-i7156430954.html")
-__formattedHtml = format_table_for_shop(dupa)
-print(__formattedHtml)
